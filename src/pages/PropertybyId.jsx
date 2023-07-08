@@ -76,6 +76,20 @@ const PropertyDetails = () => {
   }
   // --------------- Suspend Property -----------------------
 
+  // --------------- Review Property -------------------
+  const [propertyHistory, setPropertyHistory] = useState([])
+
+  const propertyReview = (id) => {
+    makeAPIRequest('get', ApiConst.propertyReview + id, null, null, null)
+      .then((response) => {
+        setPropertyHistory(response.data.property)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  // --------------- Review Property -------------------
+
   return (
     <div>
       {/* User Details Part*/}
@@ -149,7 +163,7 @@ const PropertyDetails = () => {
             {/* <button className="btn btn-primary mx-2">
               Total reviews updated
             </button> */}
-            <button className="btn btn-primary mx-2">Property History</button>
+            <button className="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#propertyView" onClick={() => propertyReview(OwnerList._id)}>Property History</button>
           </div>
         </div>
       </div>
@@ -195,6 +209,43 @@ const PropertyDetails = () => {
           </form>
         </div>
       </div>
+
+
+      {/* reviewPropertyModel */}
+      <div className="modal fade" id="propertyView" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog propertyView">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">Review Property</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <table className="table table-striped table-hover">
+                <thead className="thead-light">
+                  <tr>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                    <th>View</th>
+                    <th>Is Suspended</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{propertyHistory?.date_created}</td>
+                    <td>{propertyHistory?.updatedAt}</td>
+                    <td>{propertyHistory?.view}</td>
+                    <td>{propertyHistory?.isSuspended ? "suspended" : "Active"}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* reviewPropertyModel */}
 
     </div>
   );

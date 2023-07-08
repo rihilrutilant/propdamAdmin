@@ -37,3 +37,8 @@ table {
     width: 100%;
     border: 1px solid;
 }
+
+.propertyView {
+    width: 100% !important;
+    max-width: 700px !important;
+}

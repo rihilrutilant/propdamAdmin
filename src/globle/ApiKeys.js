@@ -29,7 +29,8 @@ const ApiConst = {
     blockTheMail: `${BaseUrl}/agent/restrictMail/`,
     dashbordData: `${BaseUrl}/admin/dashboard`,
     supportManagementList: `${BaseUrl}/supportManagement/getEnquiries`,
-    resolveEnqueries: `${BaseUrl}/supportManagement/resolvedQuery/`
+    resolveEnqueries: `${BaseUrl}/supportManagement/resolvedQuery/`,
+    propertyReview: `${BaseUrl}/property/propertyReview/`,
 }
 
 export default ApiConst;
