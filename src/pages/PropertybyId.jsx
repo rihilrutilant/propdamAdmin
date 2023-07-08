@@ -231,8 +231,8 @@ const PropertyDetails = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>{propertyHistory?.date_created}</td>
-                    <td>{propertyHistory?.updatedAt}</td>
+                    <td>{new Date(propertyHistory?.createdAt).toLocaleDateString()}</td>
+                    <td>{new Date(propertyHistory?.updatedAt).toLocaleDateString()}</td>
                     <td>{propertyHistory?.view}</td>
                     <td>{propertyHistory?.isSuspended ? "suspended" : "Active"}</td>
                   </tr>
