@@ -1,0 +1,19 @@
+.Dashboard_content{
+    display: grid;
+    grid-template-columns: repeat(3,auto );
+    column-gap: 10px;
+    row-gap: 40px;
+    padding: 50px;
+}
+
+
+@media only screen and (max-width: 767px){
+    .Dashboard_content{
+        display: flex;
+        /* grid-column: ; */
+        flex-direction: column;
+        /* padding-top: 20px;
+        padding-left: 10px; */
+        padding: 10px;
+    }
+}

@@ -1,0 +1,48 @@
+.finance{
+    margin-top: 50px;
+}
+.search-finance{
+    margin-bottom: 50px;
+}
+.top_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap : 50px;
+    align-items: center;
+}
+.top_div span{
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+}
+.top_div input{
+    width: 400px;
+}
+
+.bottom_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+.bottom_div #filter{
+    margin-right: 50px;
+    color: gray;
+}
+
+.right_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.right_div span{
+    margin-right: 20px;
+}
+
+.right_div input{
+    width: 200px;
+    cursor: pointer;
+}

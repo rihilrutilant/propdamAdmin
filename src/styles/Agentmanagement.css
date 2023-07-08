@@ -1,0 +1,39 @@
+.agent {
+    padding: 40px 20px 20px 20px;
+}
+
+table {
+    cursor: pointer;
+}
+
+.top_user_details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_user_details span {
+    margin-right: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.top_user_details h3 i {
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.modelbtn {
+    display: none;
+}
+
+.editUser {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    border: 1px solid;
+}
