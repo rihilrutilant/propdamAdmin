@@ -14,7 +14,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="logo">
         {/* <span>PROPDAM</span> */}
-        <img src="images/logo.png" alt="" />
+        <img className="logoImg" src={require("../../assets/PHOTO-2023-07-12-22-28-42.jpg")} alt="" />
         {/* <img src={require("../../assets/logo.png")} alt="" /> */}
       </div>
 

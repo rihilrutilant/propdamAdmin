@@ -108,7 +108,7 @@ const Login = () => {
     <>
       <div className="container123">
         <div className='logo1234'>
-          <img src={require('../assets/logo.png')} alt="" srcSet="" />
+          <img src={require('../assets/PHOTO-2023-07-12-22-28-42.jpg')} alt="" srcSet="" />
         </div>
         <div className='form-width '>
           <form onSubmit={handleSendOtp}>

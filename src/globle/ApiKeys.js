@@ -1,4 +1,5 @@
-const BaseUrl = "http://localhost:5000"
+const BaseUrl = "https://squid-app-f7425.ondigitalocean.app"
+// const BaseUrl = "http://localhost:4000"
 
 // const GET = "get";
 // const POST = "post";
